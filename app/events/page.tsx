@@ -1,5 +1,5 @@
 "use client"
-import React from 'react';
+import React, { useState } from 'react';
 import { Card } from '@/components/events/card';
 import {
   Carousel,
@@ -10,6 +10,7 @@ import {
 } from "@/components/ui/carousel"
 import Autoplay from "embla-carousel-autoplay";
 import { newsItems } from "@/content/events/news";
+import Gallery from '@/components/events/gallery';
 
 export default function EventsPage() {
   const plugin = React.useRef(
@@ -17,10 +18,10 @@ export default function EventsPage() {
       delay: 3000,
       stopOnInteraction: true,
     })
-  )
+  );
 
   return (
-    <div className="flex flex-col items-center h-screen">
+    <div className="flex flex-col items-center min-h-screen">
       <h1 className="font-bold text-4xl my-15">We're more than <span className="text-[#1C74BC]">just</span> <span className="text-[#BC1E2C]">selling products</span></h1>
 
       {/* News Section */}
@@ -57,6 +58,12 @@ export default function EventsPage() {
           </Carousel>
         </div>
       </section>
+
+      <section className='mt-4 text-center w-full p-10'>
+        <Gallery />
+      </section>
+
+      
     </div>
   );
 }
