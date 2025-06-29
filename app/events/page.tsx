@@ -11,6 +11,12 @@ import {
 import Autoplay from "embla-carousel-autoplay";
 import { newsItems } from "@/content/events/news";
 import Gallery from '@/components/events/gallery';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import { 
+  CalendarCard, 
+  getAllCalendarEvents, 
+  getCalendarEventsByCategory 
+} from '@/components/events/calendar';
 
 export default function EventsPage() {
   const plugin = React.useRef(
@@ -19,6 +25,12 @@ export default function EventsPage() {
       stopOnInteraction: true,
     })
   );
+
+  // Get calendar events
+  const allEvents = getAllCalendarEvents();
+  const competitionEvents = getCalendarEventsByCategory('competition');
+  const workshopEvents = getCalendarEventsByCategory('workshop');
+  const gatheringEvents = getCalendarEventsByCategory('gathering');
 
   return (
     <div className="flex flex-col items-center min-h-screen">
@@ -63,7 +75,96 @@ export default function EventsPage() {
         <Gallery />
       </section>
 
-      
+      <section className="mt-4 text-center w-full p-10">
+        <h1 className="font-bold text-3xl mb-6">Now, mark your <span className='text-[#1C74BC]'>calendar.</span></h1>
+        <p className="text-lg">From slingshot leagues to DIY workshops — we bring people together through exciting community-driven events.</p>
+        <Tabs defaultValue="all" className="mt-10">
+          <TabsList className="grid w-full grid-cols-4 mb-8">
+            <TabsTrigger value="all">All</TabsTrigger>
+            <TabsTrigger value="competition">Competition</TabsTrigger>
+            <TabsTrigger value="workshop">Workshop</TabsTrigger>
+            <TabsTrigger value="gathering">Gathering</TabsTrigger>
+          </TabsList>
+          
+          {/* All Events Tab */}
+          <TabsContent value="all" className="space-y-6">
+            {allEvents.length > 0 ? (
+              allEvents.map((event, index) => (
+                <CalendarCard
+                  key={`${event.id}-${event.title}`}
+                  id={event.id}
+                  title={event.title}
+                  location={event.location}
+                  date={event.date}
+                  imageUrl={event.imageUrl}
+                  category={event.category}
+                  index={index} // Pass the map index
+                />
+              ))
+            ) : (
+              <p className="text-center text-gray-500">No events scheduled</p>
+            )}
+          </TabsContent>
+          
+          {/* Competition Events Tab */}
+          <TabsContent value="competition" className="space-y-6">
+            {competitionEvents.length > 0 ? (
+              competitionEvents.map((event, index) => (
+                <CalendarCard
+                  key={`${event.id}-${event.title}`}
+                  id={event.id}
+                  title={event.title}
+                  location={event.location}
+                  date={event.date}
+                  imageUrl={event.imageUrl}
+                  category={event.category}
+                  index={index} // Pass the map index
+                />
+              ))
+            ) : (
+              <p className="text-center text-gray-500">No competition events scheduled</p>
+            )}
+          </TabsContent>
+          
+          {/* Workshop Events Tab */}
+          <TabsContent value="workshop" className="space-y-6">
+            {workshopEvents.length > 0 ? (
+              workshopEvents.map((event) => (
+                <CalendarCard
+                  key={`${event.id}-${event.title}`}
+                  id={event.id}
+                  title={event.title}
+                  location={event.location}
+                  date={event.date}
+                  imageUrl={event.imageUrl}
+                  category={event.category}
+                />
+              ))
+            ) : (
+              <p className="text-center text-gray-500">No workshop events scheduled</p>
+            )}
+          </TabsContent>
+          
+          {/* Gathering Events Tab */}
+          <TabsContent value="gathering" className="space-y-6">
+            {gatheringEvents.length > 0 ? (
+              gatheringEvents.map((event) => (
+                <CalendarCard
+                  key={`${event.id}-${event.title}`}
+                  id={event.id}
+                  title={event.title}
+                  location={event.location}
+                  date={event.date}
+                  imageUrl={event.imageUrl}
+                  category={event.category}
+                />
+              ))
+            ) : (
+              <p className="text-center text-gray-500">No gathering events scheduled</p>
+            )}
+          </TabsContent>
+        </Tabs>
+      </section>
     </div>
   );
 }
