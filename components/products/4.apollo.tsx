@@ -15,9 +15,6 @@ export function ApolloSeriesSection() {
   return (
     <section className="py-16">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-4">
-          Take a closer look at our catapult designs.
-        </h2>
         <div className="bg-[#1C74BC] rounded-2xl p-8 flex flex-col gap-8">
           <div className="grid md:grid-cols-3 gap-8 items-start">
             {/* Image grid layout tanpa border */}
