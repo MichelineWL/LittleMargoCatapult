@@ -82,12 +82,20 @@ export function ApolloSeriesSection() {
             </span>
           </div>
 
-          {/* Carousel - dengan looping */}
+          {/* Carousel - dengan looping dan scroll horizontal */}
           <div className="relative px-12">
-            <Carousel opts={{ loop: true }}>
-              <CarouselContent className="-ml-4">
+            <Carousel 
+              opts={{ 
+                loop: true, 
+                dragFree: true, 
+                containScroll: "trimSnaps",
+                skipSnaps: false,
+                duration: 20
+              }}
+            >
+              <CarouselContent className="-ml-4 cursor-grab active:cursor-grabbing">
                 {carouselProducts.map((product, index) => (
-                  <CarouselItem key={index} className="pl-4 md:basis-1/3">
+                  <CarouselItem key={index} className="pl-4 md:basis-1/3 select-none">
                     <div className="bg-white rounded-xl p-6 flex flex-col">
                       <div className="aspect-square w-full relative rounded-xl overflow-hidden mb-4">
                         <Image

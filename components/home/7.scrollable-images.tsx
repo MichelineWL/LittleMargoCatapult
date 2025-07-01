@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { Carousel, CarouselContent, CarouselItem } from '../ui/carousel';
 
 export function ScrollableImagesSection() {
   const productImages = [
@@ -13,22 +14,23 @@ export function ScrollableImagesSection() {
 
   return (
     <section className="py-16 bg-white">
-      <div className="relative w-full overflow-hidden">
-        <div className="flex gap-4 overflow-x-auto pb-4 scrollbar-hide -mx-4 px-4">
-          {productImages.map((image, i) => (
-            <div
-              key={i}
-              className="flex-none w-96 h-64 relative rounded-lg overflow-hidden"
-            >
-              <Image
-                src={`/images/products/${image}`}
-                alt={`Product ${image.split('.')[0]}`}
-                fill
-                className="object-cover"
-              />
-            </div>
-          ))}
-        </div>
+      <div className="relative w-full">
+        <Carousel opts={{ loop: true, align: "start", dragFree: true }}>
+          <CarouselContent className="-ml-4">
+            {productImages.map((image, i) => (
+              <CarouselItem key={i} className="pl-4 basis-1/3 md:basis-1/4 lg:basis-1/5">
+                <div className="w-full h-64 relative rounded-lg overflow-hidden">
+                  <Image
+                    src={`/images/products/${image}`}
+                    alt={`Product ${image.split('.')[0]}`}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+        </Carousel>
       </div>
     </section>
   );
