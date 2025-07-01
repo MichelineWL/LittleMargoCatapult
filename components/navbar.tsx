@@ -24,21 +24,21 @@ export default function Navbar() {
           <NavigationMenuList className="gap-8">
             <NavigationMenuItem>
               <Link href="/products" legacyBehavior passHref>
-                <NavigationMenuLink className="font-bold text-white hover:text-white/90 text-xl">
+                <NavigationMenuLink className="font-bold text-white hover:text-[#BC1E2C]/90 text-xl">
                   Product
                 </NavigationMenuLink>
               </Link>
             </NavigationMenuItem>
             <NavigationMenuItem>
               <Link href="/events" legacyBehavior passHref>
-                <NavigationMenuLink className="font-bold text-white hover:text-white/90 text-xl">
+                <NavigationMenuLink className="font-bold text-white hover:text-[#BC1E2C]/90 text-xl">
                   Event
                 </NavigationMenuLink>
               </Link>
             </NavigationMenuItem>
             <NavigationMenuItem>
               <Link href="/catalogue" legacyBehavior passHref>
-                <NavigationMenuLink className="font-bold text-white hover:text-white/90 text-xl">
+                <NavigationMenuLink className="font-bold text-white hover:text-[#BC1E2C]/90 text-xl">
                   Catalogue
                 </NavigationMenuLink>
               </Link>

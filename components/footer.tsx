@@ -74,22 +74,28 @@ export default function Footer() {
             <h4 className="font-semibold mb-4">Contact</h4>
             <ul className="space-y-3">
               <li className="flex items-center gap-2">
-                <div className="bg-white p-1.5 rounded-full">
-                  <EnvelopeIcon className="w-5 h-5 text-[#BC1E2C]" />
-                </div>
-                <span className="opacity-80">loremipsum@gmail.com</span>
+                <Link href="mailto:loremipsum@gmail.com" className="flex items-center gap-2">
+                  <div className="bg-white p-1.5 rounded-full">
+                    <EnvelopeIcon className="w-5 h-5 text-[#BC1E2C]" />
+                  </div>
+                  <span className="opacity-80">loremipsum@gmail.com</span>
+                </Link>
               </li>
               <li className="flex items-center gap-2">
-                <div className="bg-white p-1.5 rounded-full">
-                  <PhoneIcon className="w-5 h-5 text-[#BC1E2C]" />
-                </div>
-                <span className="opacity-80">+62 812-3456-7890</span>
+                <Link href="tel:+6281234567890" className="flex items-center gap-2">
+                  <div className="bg-white p-1.5 rounded-full">
+                    <PhoneIcon className="w-5 h-5 text-[#BC1E2C]" />
+                  </div>
+                  <span className="opacity-80">+62 812-3456-7890</span>
+                </Link>
               </li>
               <li className="flex items-center gap-2">
-                <div className="bg-white p-1.5 rounded-full">
-                  <Image src="/images/icons/sosmed/whatsapp.svg" alt="WhatsApp" width={20} height={20} />
-                </div>
-                <span className="opacity-80">+62 812-3456-7890</span>
+                <Link href="https://wa.me/6281234567890" className="flex items-center gap-2">
+                  <div className="bg-white p-1.5 rounded-full">
+                    <Image src="/images/icons/sosmed/whatsapp.svg" alt="WhatsApp" width={20} height={20} />
+                  </div>
+                  <span className="opacity-80">+62 812-3456-7890</span>
+                </Link>
               </li>
             </ul>
           </div>
