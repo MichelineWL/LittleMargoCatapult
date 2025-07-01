@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 export function LocalPresenceSection() {
   return (
-    <div className="container mx-auto px-4 space-y-8">
+    <div className="px-8 lg:px-16 xl:px-24 space-y-8">
       <div className="text-center space-y-2">
         <h2 className="text-3xl font-bold">
           You'll spot us across local communities in <span className="text-[#BC1E2C]">Indonesia</span>!
@@ -23,7 +23,7 @@ export function LocalPresenceSection() {
         <p className="text-gray-600">...as we marketed it through:</p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-3xl mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         {[
           { icon: "users-icon.png", text: "Community Forums & Local Groups" },
           { icon: "globe-icon.png", text: "Social Media Platforms" },
@@ -31,7 +31,7 @@ export function LocalPresenceSection() {
         ].map(({ icon, text }) => (
           <div
             key={text}
-            className="flex flex-col items-center p-6 bg-[#BC1E2C] rounded-xl text-white text-center"
+            className="flex flex-col items-center px-8 py-6 bg-[#BC1E2C] rounded-xl text-white text-center"
           >
             <div className="w-12 h-12 mb-3">
               <Image

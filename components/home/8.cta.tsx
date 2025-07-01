@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { Button } from "@/components/ui/button";
 
 const CTA_IMAGES = [
@@ -32,19 +33,22 @@ export function CTASection() {
             </h2>
             <div className="flex flex-wrap justify-center gap-4">
               <Button
+                asChild
                 className="bg-[#BC1E2C] hover:bg-[#a01824] text-white"
               >
-                Explore Products
+                <Link href="/products">Explore Products</Link>
               </Button>
               <Button
+                asChild
                 className="bg-[#BC1E2C] hover:bg-[#a01824] text-white"
               >
-                Explore Events
+                <Link href="/events">Explore Events</Link>
               </Button>
               <Button
+                asChild
                 className="bg-[#1C74BC] hover:bg-[#165a94] text-white"
               >
-                I need to consult!
+                <Link href="https://wa.me/620123456789">I need to consult!</Link>
               </Button>
             </div>
           </div>

@@ -1,6 +1,11 @@
 import Image from "next/image";
 import type { StaticImageData } from "next/image";
-import { Product } from "@/types";
+type Product = {
+  name: string;
+  image: string;
+  description: string;
+};
+import { ProductCard } from "@/components/ui/product-card";
 
 const PRODUCTS: Product[] = [
   {
@@ -43,29 +48,20 @@ export function ProductsSection() {
           Not just any catapults—these are our designs you won&apos;t see elsewhere.
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-0 gap-y-8">
           {PRODUCTS.map((product) => (
-            <div 
+            <ProductCard
               key={product.name}
-              className="bg-[#1C74BC] rounded-xl overflow-hidden"
-            >
-              <div className="relative aspect-square">
-                <Image
-                  src={product.image}
-                  alt={product.name}
-                  fill
-                  className="object-contain p-6"
-                />
-              </div>
-              <div className="p-4 bg-[#1C74BC] text-white">
-                <div className="inline-block bg-white text-black rounded-full px-4 py-1 text-sm font-medium mb-3">
-                  {product.name}
-                </div>
-                <p className="text-sm text-white/90 leading-relaxed">
-                  {product.description}
-                </p>
-              </div>
-            </div>
+              bgColor="rgba(28,116,188,0.4)"
+              image={product.image}
+              titleBgColor="#fff"
+              title={product.name}
+              titleColor="#111"
+              description={product.description}
+              descriptionColor="#111"
+              width={450}
+              height="100%"
+            />
           ))}
         </div>
       </div>
