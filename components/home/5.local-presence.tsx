@@ -5,7 +5,7 @@ export function LocalPresenceSection() {
     <div className="px-8 lg:px-16 xl:px-24 space-y-8">
       <div className="text-center space-y-2">
         <h2 className="text-3xl font-bold">
-          You'll spot us across local communities in <span className="text-[#BC1E2C]">Indonesia</span>!
+          You&apos;ll spot us across local communities in <span className="text-[#BC1E2C]">Indonesia</span>!
         </h2>
         <p className="text-gray-600">Our furthest reach on local goes from Sabang to Merauke...</p>
       </div>

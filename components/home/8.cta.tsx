@@ -1,25 +1,5 @@
-import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-
-const CTA_IMAGES = [
-  {
-    src: "/images/products/x.png",
-    alt: "Catapult Detail 1"
-  },
-  {
-    src: "/images/products/x.png",
-    alt: "Catapult Detail 2"
-  },
-  {
-    src: "/images/products/x.png",
-    alt: "Catapult Detail 3"
-  },
-  {
-    src: "/images/products/x.png",
-    alt: "Catapult Detail 4"
-  }
-] as const;
 
 export function CTASection() {
   return (

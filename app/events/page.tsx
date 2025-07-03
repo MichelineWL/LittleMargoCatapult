@@ -1,5 +1,5 @@
 "use client"
-import React, { useState } from 'react';
+import React from 'react';
 import { Card } from '@/components/events/card';
 import {
   Carousel,
@@ -37,11 +37,11 @@ export default function EventsPage() {
 
   return (
     <div className="flex flex-col items-center min-h-screen">
-      <h1 className="font-bold text-4xl my-15">We're more than <span className="text-[#1C74BC]">just</span> <span className="text-[#BC1E2C]">selling products</span></h1>
+      <h1 className="font-bold text-4xl my-15">We&apos;re more than <span className="text-[#1C74BC]">just</span> <span className="text-[#BC1E2C]">selling products</span></h1>
 
       {/* News Section */}
       <section className="mt-4 text-center bg-[#D9D9D9] w-full p-10">
-        <p className="text-lg">We've been spotlighted by national and local media — because our work sparks stories worth sharing</p>
+        <p className="text-lg">We&apos;ve been spotlighted by national and local media — because our work sparks stories worth sharing</p>
         <div className="mx-auto flex justify-center mt-8 items-center relative w-[85%] max-w-6xl">
           <Carousel 
             className="w-full" 

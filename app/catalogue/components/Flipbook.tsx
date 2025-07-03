@@ -1,5 +1,6 @@
 "use client";
-import React, { useRef, useState, ForwardedRef } from 'react';
+import React, { useRef, useState } from 'react';
+import Image from 'next/image';
 import HTMLFlipBook from 'react-pageflip';
 import './../style/katalog.css'
 
@@ -36,7 +37,13 @@ const Page = React.forwardRef<HTMLDivElement, PageProps>((props, ref) => {
     <div className="page" ref={ref}>
       <div className="page-content">
         <div className="page-image">
-          <img src={props.image} alt={`Page ${props.number}`} />
+          <Image 
+            src={props.image} 
+            alt={`Page ${props.number}`}
+            width={400} 
+            height={600}
+            style={{ objectFit: 'contain' }}
+          />
         </div>
         <div className="page-number">{props.number}</div>
       </div>
@@ -54,18 +61,23 @@ interface PageFlip {
   };
 }
 
+// Define event types for HTMLFlipBook
+interface FlipBookFlipEvent {
+  data: number;
+}
+
 function Flipbook() {
   const book = useRef<PageFlip | null>(null);
   const [currentPage, setCurrentPage] = useState(0);
   const [totalPages, setTotalPages] = useState(0);
 
   // When book is initialized
-  const onInit = (e: any) => {
+  const onInit = () => {
     setTotalPages(pages.length);
   };
 
   // When page is flipped
-  const onFlip = (e: any) => {
+  const onFlip = (e: FlipBookFlipEvent) => {
     setCurrentPage(e.data);
   };
 
@@ -98,18 +110,26 @@ function Flipbook() {
           minHeight={400}
           maxHeight={800}
           maxShadowOpacity={0.5}
-          showCover={true}        // Ensures first page is treated as a cover
+          showCover={true}
           mobileScrollSupport={true}
           flippingTime={1000}
-          startPage={0}          // Start with the cover
+          startPage={0}
           drawShadow={true}
           useMouseEvents={true}
-          renderOnlyPageLengthChange={false}  // Render all pages at once
-          usePortrait={false}    // Use landscape mode for proper spread
+          renderOnlyPageLengthChange={false}
+          usePortrait={false}
           onInit={onInit}
           onFlip={onFlip}
           className="demo-book"
           style={{ backgroundImage: "url('/images/background.jpg')" }}
+          
+          // Add missing required properties
+          startZIndex={0}
+          autoSize={true}
+          clickEventForward={true}
+          swipeDistance={10}
+          showPageCorners={true}
+          disableFlipByClick={false}
         >
           {pages.map((page, index) => (
             <Page key={index} image={page} number={index + 1} />

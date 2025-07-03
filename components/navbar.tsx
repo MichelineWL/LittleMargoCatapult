@@ -1,7 +1,6 @@
 import Link from "next/link"
 import Image from "next/image"
 import { NavigationMenu, NavigationMenuItem, NavigationMenuLink, NavigationMenuList } from "@/components/ui/navigation-menu"
-import { Button } from "@/components/ui/button"
 
 export default function Navbar() {
   return (

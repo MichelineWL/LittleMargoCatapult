@@ -6,8 +6,8 @@ import Link from 'next/dist/client/link';
 export function CustomizationSection() {
   return (
     <section className="py-16">
-      <h2 className="text-3xl font-bold text-center mb-4">We're not just ready-to-buy. Customization is what we do best.</h2>
-      <p className="text-gray-600 text-center">Let's talk — we'll tune your catapult to match your style</p>
+      <h2 className="text-3xl font-bold text-center mb-4">We&apos;re not just ready-to-buy. Customization is what we do best.</h2>
+      <p className="text-gray-600 text-center">Let&apos;s talk — we&apos;ll tune your catapult to match your style</p>
       <ScrollableImagesSection/>   
       <div className="flex justify-center gap-4 mt-8">
         <Link href="https://wa.me/620123456789" passHref>
