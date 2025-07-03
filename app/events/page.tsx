@@ -17,6 +17,8 @@ import {
   getAllCalendarEvents, 
   getCalendarEventsByCategory 
 } from '@/components/events/calendar';
+import dynamic from 'next/dynamic';
+const CustomizationSection = dynamic(() => import('@/components/products/5.customization').then(mod => mod.CustomizationSection), { ssr: true });
 
 export default function EventsPage() {
   const plugin = React.useRef(
@@ -31,6 +33,7 @@ export default function EventsPage() {
   const competitionEvents = getCalendarEventsByCategory('competition');
   const workshopEvents = getCalendarEventsByCategory('workshop');
   const gatheringEvents = getCalendarEventsByCategory('gathering');
+
 
   return (
     <div className="flex flex-col items-center min-h-screen">
@@ -165,6 +168,8 @@ export default function EventsPage() {
           </TabsContent>
         </Tabs>
       </section>
+
+      <CustomizationSection />
     </div>
   );
 }
