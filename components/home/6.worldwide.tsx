@@ -18,7 +18,7 @@ export function WorldwideSection() {
               className="bg-[#1C74BC] text-white text-sm px-4 py-1 rounded-full flex items-center gap-2"
             >
               <Image
-                src="/images/icons/gps.png"
+                src="/images/icons/location.png"
                 alt="Location"
                 width={16}
                 height={16}

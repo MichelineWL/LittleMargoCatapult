@@ -2,10 +2,10 @@ import Image from "next/image";
 import type { StaticImageData } from "next/image";
 
 const HERO_IMAGES = {
-  showcase: "/images/hero/hero1.png",
-  action: "/images/hero/hero2.png",
-  detail: "/images/hero/hero3.png",
-  lifestyle: "/images/hero/hero4.png",
+  showcase: "/images/hero/showcase-product.png",
+  action: "/images/hero/action-shot.png",
+  detail: "/images/hero/product-detail.png",
+  lifestyle: "/images/hero/lifestyle-use.png",
 } as const;
 
 export function HeroSection() {

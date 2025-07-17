@@ -3,13 +3,13 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
 
 export function ApolloSeriesSection() {
   const carouselProducts = [
-    { id: 'IDR XXXX', image: '/images/products/1.jpg' },
-    { id: 'IDR XXXX', image: '/images/products/2.jpg' },
-    { id: 'IDR XXXX', image: '/images/products/3.jpg' },
-    { id: 'IDR XXXX', image: '/images/products/4.jpg' },
-    { id: 'IDR XXXX', image: '/images/products/5.jpg' },
-    { id: 'IDR XXXX', image: '/images/products/6.jpg' },
-    { id: 'IDR XXXX', image: '/images/products/7.jpg' },
+    { id: 'IDR XXXX', image: '/images/products/apollo-gallery/apollo-gallery-01.jpg' },
+    { id: 'IDR XXXX', image: '/images/products/apollo-gallery/apollo-gallery-02.jpg' },
+    { id: 'IDR XXXX', image: '/images/products/apollo-gallery/apollo-gallery-03.jpg' }, 
+    { id: 'IDR XXXX', image: '/images/products/apollo-gallery/apollo-gallery-04.jpg' },
+    { id: 'IDR XXXX', image: '/images/products/apollo-gallery/apollo-gallery-05.jpg' },
+    { id: 'IDR XXXX', image: '/images/products/apollo-gallery/apollo-gallery-06.jpg' },
+    { id: 'IDR XXXX', image: '/images/products/apollo-gallery/apollo-gallery-07.jpg' },
   ];
 
   return (
@@ -22,7 +22,7 @@ export function ApolloSeriesSection() {
               {/* Row 1: 1 large image pada 2 kolom + 1 vertical image */}
               <div className="col-span-2 aspect-[2/1] rounded-xl overflow-hidden">
                 <Image
-                  src="/images/products/apollo.png"
+                  src="/images/products/apollo-gallery/apollo-gallery-07.jpg"
                   alt="Apollo Product"
                   width={280}
                   height={140}
@@ -31,10 +31,10 @@ export function ApolloSeriesSection() {
               </div>
               <div className="row-span-2 rounded-xl overflow-hidden">
                 <Image
-                  src="/images/products/apollo.png"
+                  src="/images/products/apollo-gallery/apollo-gallery-10.jpg"
                   alt="Apollo Product"
-                  width={140}
-                  height={280}
+                  width={280}
+                  height={140}
                   className="object-cover w-full h-full"
                 />
               </div>
@@ -42,19 +42,19 @@ export function ApolloSeriesSection() {
               {/* Row 2: 2 square images */}
               <div className="aspect-square rounded-xl overflow-hidden">
                 <Image
-                  src="/images/products/apollo.png"
+                  src="/images/products/apollo-gallery/apollo-gallery-12.jpg"
                   alt="Apollo Product"
-                  width={100}
-                  height={100}
+                  width={280}
+                  height={140}
                   className="object-cover w-full h-full"
                 />
               </div>
               <div className="aspect-square rounded-xl overflow-hidden">
                 <Image
-                  src="/images/products/apollo.png"
+                  src="/images/products/apollo-gallery/apollo-gallery-01.jpg"
                   alt="Apollo Product"
-                  width={100}
-                  height={100}
+                  width={280}
+                  height={140}
                   className="object-cover w-full h-full"
                 />
               </div>

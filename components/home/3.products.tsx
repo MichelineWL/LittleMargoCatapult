@@ -10,32 +10,32 @@ import { ProductCard } from "@/components/ui/product-card";
 const PRODUCTS: Product[] = [
   {
     name: "Klassix",
-    image: "/images/products/klassix.png",
+    image: "/images/products/klassix-gallery/klassix-gallery-01.jpg",
     description: "A regular Y-shaped design with a signature bee-tail curve.",
   },
   {
     name: "A-Six",
-    image: "/images/products/a-six.png",
+    image: "/images/products/a-six-gallery/a-six-gallery-01.jpg",
     description: "A fusion of Klassix and Die-T for a blend of traditional and modern slingshot design.",
   },
   {
     name: "Die-T",
-    image: "/images/products/die-t.png",
+    image: "/images/products/die-t-gallery/die-t-gallery-01.jpg",
     description: "Slim and elegant – featuring a bee-tail curve for unique looks without sacrificing comfort.",
   },
   {
     name: "Apollo",
-    image: "/images/products/apollo.png",
+    image: "/images/products/apollo-gallery/apollo-gallery-01.jpg",
     description: "Rocket-inspired shape, built to launch with power.",
   },
   {
     name: "Margo Latte",
-    image: "/images/products/margo-latte.png",
+    image: "/images/products/margo-latte-gallery/margo-latte-gallery-01.jpg",
     description: "Ergonomic 'footprint' grip design, inspired by primitive tools for a natural hold.",
   },
   {
     name: "Fedora",
-    image: "/images/products/fedora.png",
+    image: "/images/products/fedora-gallery/fedora-gallery-01.jpg",
     description: "Tailored for a modern slingshot grip—sleek, refined, and elegant.",
   },
 ];

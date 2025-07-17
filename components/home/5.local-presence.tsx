@@ -12,7 +12,7 @@ export function LocalPresenceSection() {
 
       <div className="relative h-[300px] mx-auto max-w-3xl">
         <Image
-          src="/images/icons/Map.png"
+          src="/images/icons/map.png"
           alt="Indonesia Map Distribution"
           fill
           className="object-contain"

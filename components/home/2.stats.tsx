@@ -3,25 +3,25 @@ import type { StaticImageData } from "next/image";
 
 const STATS = [
   {
-    icon: "/images/icons/stats/box.png",
+    icon: "/images/icons/stats/packages.png",
     number: "1000+",
     label: "Products Sold",
     sublabel: "2020 - 2024",
   },
   {
-    icon: "/images/icons/stats/globe.png",
+    icon: "/images/icons/stats/global-reach.png",
     number: "15+",
     label: "Countries Reached",
     sublabel: "Global Market",
   },
   {
-    icon: "/images/icons/stats/users.png",
+    icon: "/images/icons/stats/customers.png",
     number: "500+",
     label: "Community Members",
     sublabel: "Active Users",
   },
   {
-    icon: "/images/icons/stats/dollar.png",
+    icon: "/images/icons/stats/revenue.png",
     number: "IDR 250K - 6 Mio",
     label: "Price Ranges",
     sublabel: "Custom & Ready Stock",

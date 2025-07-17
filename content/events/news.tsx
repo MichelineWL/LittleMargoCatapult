@@ -1,7 +1,7 @@
-import News1 from "@/public/images/news/news1.jpeg";
-import News2 from "@/public/images/news/news2.webp";
-import News3 from "@/public/images/news/news3.webp";
-import News4 from "@/public/images/news/news4.jpg";
+import News1 from "@/public/images/news/company-announcement.jpg";
+import News2 from "@/public/images/news/product-launch.webp";
+import News3 from "@/public/images/news/community-event.webp";
+import News4 from "@/public/images/news/industry-update.jpg";
 
 export interface NewsItem {
   title: string;

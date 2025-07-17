@@ -4,13 +4,13 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
 
 export function KlassixSeriesSection() {
   const carouselProducts = [
-    { id: 'IDR XXXX', image: '/images/products/1.jpg' },
-    { id: 'IDR XXXX', image: '/images/products/2.jpg' },
-    { id: 'IDR XXXX', image: '/images/products/3.jpg' },
-    { id: 'IDR XXXX', image: '/images/products/4.jpg' },
-    { id: 'IDR XXXX', image: '/images/products/5.jpg' },
-    { id: 'IDR XXXX', image: '/images/products/6.jpg' },
-    { id: 'IDR XXXX', image: '/images/products/7.jpg' },
+    { id: 'IDR XXXX', image: '/images/products/klassix-gallery/klassix-gallery-01.jpg' },
+    { id: 'IDR XXXX', image: '/images/products/klassix-gallery/klassix-gallery-02.jpg' },
+    { id: 'IDR XXXX', image: '/images/products/klassix-gallery/klassix-gallery-03.jpg' },
+    { id: 'IDR XXXX', image: '/images/products/klassix-gallery/klassix-gallery-04.jpg' },
+    { id: 'IDR XXXX', image: '/images/products/klassix-gallery/klassix-gallery-05.jpg' },
+    { id: 'IDR XXXX', image: '/images/products/klassix-gallery/klassix-gallery-06.jpg' },
+    { id: 'IDR XXXX', image: '/images/products/klassix-gallery/klassix-gallery-07.jpg' },
   ];
 
   return (
@@ -26,7 +26,7 @@ export function KlassixSeriesSection() {
               {/* Row 1: 1 large image pada 2 kolom + 1 vertical image */}
               <div className="col-span-2 aspect-[2/1] rounded-xl overflow-hidden">
                 <Image
-                  src="/images/products/klassix.png"
+                  src='/images/products/klassix-gallery/klassix-gallery-01.jpg'
                   alt="Klassix Product"
                   width={280}
                   height={140}
@@ -35,10 +35,10 @@ export function KlassixSeriesSection() {
               </div>
               <div className="row-span-2 rounded-xl overflow-hidden">
                 <Image
-                  src="/images/products/die-t.png"
-                  alt="Die-T Product"
-                  width={140}
-                  height={280}
+                  src='/images/products/klassix-gallery/klassix-gallery-03.jpg'
+                  alt="Klassix Product"
+                  width={280}
+                  height={140}
                   className="object-cover w-full h-full"
                 />
               </div>
@@ -46,19 +46,19 @@ export function KlassixSeriesSection() {
               {/* Row 2: 2 square images */}
               <div className="aspect-square rounded-xl overflow-hidden">
                 <Image
-                  src="/images/products/apollo.png"
-                  alt="Apollo Product"
-                  width={100}
-                  height={100}
+                  src='/images/products/klassix-gallery/klassix-gallery-09.jpg'
+                  alt="Klassix Product"
+                  width={280}
+                  height={140}
                   className="object-cover w-full h-full"
                 />
               </div>
               <div className="aspect-square rounded-xl overflow-hidden">
                 <Image
-                  src="/images/products/a-six.png"
-                  alt="A-Six Product"
-                  width={100}
-                  height={100}
+                  src='/images/products/klassix-gallery/klassix-gallery-04.jpg'
+                  alt="Klassix Product"
+                  width={280}
+                  height={140}
                   className="object-cover w-full h-full"
                 />
               </div>

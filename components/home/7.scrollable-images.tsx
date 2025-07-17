@@ -3,13 +3,36 @@ import { Carousel, CarouselContent, CarouselItem } from '../ui/carousel';
 
 export function ScrollableImagesSection() {
   const productImages = [
-    '1.jpg',
-    '2.jpg',
-    '3.jpg',
-    '4.jpg',
-    '5.jpg',
-    '6.jpg',
-    '7.jpg',
+    '/images/products/apollo-gallery/apollo-gallery-01.jpg',
+    '/images/products/apollo-gallery/apollo-gallery-02.jpg',
+    '/images/products/apollo-gallery/apollo-gallery-03.jpg',
+    '/images/products/apollo-gallery/apollo-gallery-04.jpg',
+    '/images/products/apollo-gallery/apollo-gallery-05.jpg',
+    '/images/products/apollo-gallery/apollo-gallery-06.jpg',
+    '/images/products/apollo-gallery/apollo-gallery-07.jpg',
+    '/images/products/die-t-gallery/die-t-gallery-01.jpg',
+    '/images/products/die-t-gallery/die-t-gallery-02.jpg',
+    '/images/products/die-t-gallery/die-t-gallery-03.jpg',
+    '/images/products/die-t-gallery/die-t-gallery-04.jpg',
+    '/images/products/die-t-gallery/die-t-gallery-05.jpg',
+    '/images/products/die-t-gallery/die-t-gallery-06.jpg',
+    '/images/products/die-t-gallery/die-t-gallery-07.jpg',
+    '/images/products/klassix-gallery/klassix-gallery-01.jpg',
+    '/images/products/klassix-gallery/klassix-gallery-02.jpg',
+    '/images/products/klassix-gallery/klassix-gallery-03.jpg',
+    '/images/products/klassix-gallery/klassix-gallery-04.jpg',
+    '/images/products/a-six-gallery/a-six-gallery-01.jpg',
+    '/images/products/a-six-gallery/a-six-gallery-02.jpg',
+    '/images/products/a-six-gallery/a-six-gallery-03.jpg',
+    '/images/products/a-six-gallery/a-six-gallery-04.jpg',
+    '/images/products/fedora-gallery/fedora-gallery-01.jpg',
+    '/images/products/fedora-gallery/fedora-gallery-02.jpg',
+    '/images/products/fedora-gallery/fedora-gallery-03.jpg',
+    '/images/products/fedora-gallery/fedora-gallery-04.jpg',
+    '/images/products/roo-pouch-gallery/roo-pouch-gallery-01.jpg',
+    '/images/products/roo-pouch-gallery/roo-pouch-gallery-02.jpg',
+    '/images/products/roo-pouch-gallery/roo-pouch-gallery-03.jpg',
+    '/images/products/roo-pouch-gallery/roo-pouch-gallery-04.jpg',
   ];
 
   return (
@@ -21,8 +44,8 @@ export function ScrollableImagesSection() {
               <CarouselItem key={i} className="pl-4 basis-1/3 md:basis-1/4 lg:basis-1/5">
                 <div className="w-full h-64 relative rounded-lg overflow-hidden">
                   <Image
-                    src={`/images/products/${image}`}
-                    alt={`Product ${image.split('.')[0]}`}
+                    src={image}
+                    alt={`Product ${image.split('/').pop()?.split('.')[0] || 'gallery'}`}
                     fill
                     className="object-cover"
                   />
