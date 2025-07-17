@@ -69,7 +69,7 @@ export function ApolloSeriesSection() {
                 Designed for athletes, built for precision.
               </h3>
               <p className="text-xl text-white leading-relaxed">
-                Crafted to meet athletes' needs, this slingshot offers handling that aligns perfectly with grip position. Available in two design variations and made from premium materials.
+                Crafted to meet athletes&apos; needs, this slingshot offers handling that aligns perfectly with grip position. Available in two design variations and made from premium materials.
               </p>
             </div>
           </div>

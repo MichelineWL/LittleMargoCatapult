@@ -1,5 +1,4 @@
 import dynamic from 'next/dynamic';
-import Image from 'next/image';
 
 const HeroSection = dynamic(() => import('@/components/home/1.hero').then(mod => mod.HeroSection), { ssr: true });
 const StatsSection = dynamic(() => import('@/components/home/2.stats').then(mod => mod.StatsSection), { ssr: true });

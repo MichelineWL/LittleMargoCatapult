@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import { ProductCard } from '@/components/ui/product-card';
 
 const pouchDescription = `Our bullet pouches are crafted from authentic kangaroo leather—soft yet incredibly durable.

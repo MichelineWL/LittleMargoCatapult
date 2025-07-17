@@ -69,7 +69,7 @@ export function DieTSeriesSection() {
                 A unique and minimal slingshot loved by many.
               </h3>
               <p className="text-xl leading-relaxed">
-                Designed with a distinctive beehive-tail curve under the grip, this compact and minimalist slingshot excels in versatility without sacrificing function. Available in OTT, TTF, and PFS. It's our most popular and best-selling model.
+                Designed with a distinctive beehive-tail curve under the grip, this compact and minimalist slingshot excels in versatility without sacrificing function. Available in OTT, TTF, and PFS. It&apos;s our most popular and best-selling model.
               </p>
             </div>
           </div>

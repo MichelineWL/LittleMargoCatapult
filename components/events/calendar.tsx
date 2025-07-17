@@ -1,3 +1,4 @@
+import Image from "next/image";
 interface calendarEvent {
     id: number;
     title: string;
@@ -90,10 +91,12 @@ export const CalendarCard: React.FC<CalendarCardProps> = ({
   return (
     <div className={`flex flex-col ${isEven ? 'sm:flex-row-reverse' : 'sm:flex-row'} gap-4 bg-white rounded-xl shadow-md`}>
       <div className="w-full sm:w-1/2 h-48 sm:h-auto overflow-hidden rounded-xl">
-        <img
+        <Image
           src={imageUrl}
           alt={title}
           className="w-full h-full object-cover"
+          width={500}
+          height={150}
         />
       </div>
       <div className={`flex flex-col justify-between p-4 bg-[#1C74BC] rounded-xl text-white w-full sm:w-1/2 ${isEven ? 'sm:text-right' : ''}`}>

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { galleryItems } from "@/content/events/gallery";
+import Image from "next/image";
 
 export default function Gallery() {
     const [hoveredColumn, setHoveredColumn] = useState<number | null>(null);
@@ -29,14 +30,18 @@ export default function Gallery() {
                     onMouseEnter={() => setHoveredColumn(1)}
                     onMouseLeave={() => setHoveredColumn(null)}
                   >
-                    <img 
+                    <Image 
                       src={galleryItems[0].imageUrl} 
-                      alt={galleryItems[0].alt} 
+                      alt={galleryItems[0].alt}
+                      width={500}
+                      height={300} 
                       className={`w-full object-cover rounded-lg shadow-md transition-all duration-300 ${getImageSizeClass(1, 1, galleryItems[0].initialSize)}`}
                     />
-                    <img 
+                    <Image 
                       src={galleryItems[1].imageUrl} 
-                      alt={galleryItems[1].alt} 
+                      alt={galleryItems[1].alt}
+                      width={500}
+                      height={150}  
                       className={`w-full object-cover rounded-lg shadow-md transition-all duration-300 ${getImageSizeClass(2, 1, galleryItems[1].initialSize)}`}
                     />
                   </div>
@@ -47,14 +52,18 @@ export default function Gallery() {
                     onMouseEnter={() => setHoveredColumn(2)}
                     onMouseLeave={() => setHoveredColumn(null)}
                   >
-                    <img 
+                    <Image 
                       src={galleryItems[2].imageUrl} 
-                      alt={galleryItems[2].alt} 
+                      alt={galleryItems[2].alt}
+                      width={500}
+                      height={300}  
                       className={`w-full object-cover rounded-lg shadow-md transition-all duration-300 ${getImageSizeClass(3, 2, galleryItems[2].initialSize)}`}
                     />
-                    <img 
+                    <Image 
                       src={galleryItems[3].imageUrl} 
-                      alt={galleryItems[3].alt} 
+                      alt={galleryItems[3].alt}
+                      width={500}
+                      height={150}  
                       className={`w-full object-cover rounded-lg shadow-md transition-all duration-300 ${getImageSizeClass(4, 2, galleryItems[3].initialSize)}`}
                     />
                   </div>
@@ -65,14 +74,18 @@ export default function Gallery() {
                     onMouseEnter={() => setHoveredColumn(3)}
                     onMouseLeave={() => setHoveredColumn(null)}
                   >
-                    <img 
+                    <Image 
                       src={galleryItems[4].imageUrl} 
-                      alt={galleryItems[4].alt} 
+                      alt={galleryItems[4].alt}
+                      width={500}
+                      height={300}  
                       className={`w-full object-cover rounded-lg shadow-md transition-all duration-300 ${getImageSizeClass(5, 3, galleryItems[4].initialSize)}`}
                     />
-                    <img 
+                    <Image 
                       src={galleryItems[5].imageUrl} 
-                      alt={galleryItems[5].alt} 
+                      alt={galleryItems[5].alt}
+                      width={500}
+                      height={150}  
                       className={`w-full object-cover rounded-lg shadow-md transition-all duration-300 ${getImageSizeClass(6, 3, galleryItems[5].initialSize)}`}
                     />
                   </div>
@@ -83,14 +96,18 @@ export default function Gallery() {
                     onMouseEnter={() => setHoveredColumn(4)}
                     onMouseLeave={() => setHoveredColumn(null)}
                   >
-                    <img 
+                    <Image 
                       src={galleryItems[6].imageUrl} 
-                      alt={galleryItems[6].alt} 
+                      alt={galleryItems[6].alt}
+                      width={500}
+                      height={300}  
                       className={`w-full object-cover rounded-lg shadow-md transition-all duration-300 ${getImageSizeClass(7, 4, galleryItems[6].initialSize)}`}
                     />
-                    <img 
+                    <Image 
                       src={galleryItems[7].imageUrl} 
-                      alt={galleryItems[7].alt} 
+                      alt={galleryItems[7].alt}
+                      width={500}
+                      height={150}  
                       className={`w-full object-cover rounded-lg shadow-md transition-all duration-300 ${getImageSizeClass(8, 4, galleryItems[7].initialSize)}`}
                     />
                   </div>

@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import { Button } from '../ui/button';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '../ui/carousel';
 
 export function KlassixSeriesSection() {
