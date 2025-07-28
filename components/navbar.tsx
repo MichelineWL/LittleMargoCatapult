@@ -1,7 +1,6 @@
 "use client"
 import Link from "next/link"
 import Image from "next/image"
-import { useState } from "react"
 import { NavigationMenu, NavigationMenuItem, NavigationMenuLink, NavigationMenuList } from "@/components/ui/navigation-menu"
 import { useState } from "react"
 
@@ -15,9 +14,9 @@ export default function Navbar() {
   ]
 
   return (
-    <nav className="fixed w-full bg-[#BC1E2C] z-50 shadow-lg">
-      <div className="container mx-auto px-4 py-2 md:py-3 flex justify-between items-center min-h-[60px] md:min-h-[70px]">
-        <Link href="/" className="flex items-center gap-1.5 md:gap-2" onClick={closeSheet}>
+    <nav className="fixed w-full bg-[#BC1E2C] z-50">
+      <div className="container mx-auto px-4 py-3 flex justify-between items-center">
+        <Link href="/" className="flex items-center gap-2">
           <Image
             src="/images/logo.png"
             alt="Little Margo Logo"
@@ -33,11 +32,11 @@ export default function Navbar() {
           <NavigationMenuList className="gap-6 lg:gap-8">
             {menuItems.map((item) => (
               <NavigationMenuItem key={item.href}>
-                <Link href={item.href} legacyBehavior passHref>
-                  <NavigationMenuLink className="font-bold text-white hover:text-white/80 text-lg lg:text-xl transition-colors duration-200">
+                <NavigationMenuLink asChild>
+                  <Link href={item.href} className="font-bold text-white hover:text-white/80 text-lg lg:text-xl transition-colors duration-200">
                     {item.label}
-                  </NavigationMenuLink>
-                </Link>
+                  </Link>
+                </NavigationMenuLink>
               </NavigationMenuItem>
             ))}
           </NavigationMenuList>
