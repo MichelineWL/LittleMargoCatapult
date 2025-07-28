@@ -133,21 +133,16 @@ export default function EventsPage() {
           
           {/* Workshop Events Tab */}
           <TabsContent value="workshop" className="space-y-4 md:space-y-6 px-2">
-            {workshopEvents.length > 0 ? (
-              workshopEvents.map((event) => (
-                <CalendarCard
-                  key={`${event.id}-${event.title}`}
-                  id={event.id}
-                  title={event.title}
-                  location={event.location}
-                  date={event.date}
-                  imageUrl={event.imageUrl}
-                  category={event.category}
-                />
-              ))
-            ) : (
-              <p className="text-center text-gray-500 text-sm md:text-base">No workshop events scheduled</p>
-            )}
+            <div className="text-center py-12">
+              <div className="mb-4">
+                <svg className="w-16 h-16 text-gray-400 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-700 mb-2">Workshop Events</h3>
+              <p className="text-gray-500 text-lg">Coming Soon!</p>
+              <p className="text-gray-400 text-sm mt-2">Exciting workshop events are being planned. Stay tuned for updates!</p>
+            </div>
           </TabsContent>
           
           {/* Gathering Events Tab */}
