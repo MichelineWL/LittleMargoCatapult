@@ -31,7 +31,6 @@ export default function EventsPage() {
   // Get calendar events
   const allEvents = getAllCalendarEvents();
   const competitionEvents = getCalendarEventsByCategory('competition');
-  const workshopEvents = getCalendarEventsByCategory('workshop');
   const gatheringEvents = getCalendarEventsByCategory('gathering');
 
 
