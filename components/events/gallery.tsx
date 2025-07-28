@@ -21,12 +21,12 @@ export default function Gallery() {
     return (
         <>
         {/* Gallery Section */}
-                <h1 className="font-bold text-4xl my-10">Take a look at our <span className='text-[#BC1E2C]'>events</span></h1>
+                <h1 className="font-bold text-2xl md:text-3xl lg:text-4xl my-6 md:my-8 lg:my-10 px-2 text-center">Take a look at our <span className='text-[#BC1E2C]'>events</span></h1>
                 
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 p-4 max-w-7xl mx-auto">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4 p-2 md:p-4 max-w-7xl mx-auto">
                   {/* Column 1 */}
                   <div 
-                    className="flex flex-col gap-4" 
+                    className="flex flex-col gap-3 md:gap-4" 
                     onMouseEnter={() => setHoveredColumn(1)}
                     onMouseLeave={() => setHoveredColumn(null)}
                   >
@@ -35,20 +35,20 @@ export default function Gallery() {
                       alt={galleryItems[0].alt}
                       width={500}
                       height={300} 
-                      className={`w-full object-cover rounded-lg shadow-md transition-all duration-300 ${getImageSizeClass(1, 1, galleryItems[0].initialSize)}`}
+                      className={`w-full object-cover rounded-lg shadow-md transition-all duration-300 h-[200px] md:${getImageSizeClass(1, 1, galleryItems[0].initialSize)}`}
                     />
                     <Image 
                       src={galleryItems[1].imageUrl} 
                       alt={galleryItems[1].alt}
                       width={500}
                       height={150}  
-                      className={`w-full object-cover rounded-lg shadow-md transition-all duration-300 ${getImageSizeClass(2, 1, galleryItems[1].initialSize)}`}
+                      className={`w-full object-cover rounded-lg shadow-md transition-all duration-300 h-[120px] md:${getImageSizeClass(2, 1, galleryItems[1].initialSize)}`}
                     />
                   </div>
                   
                   {/* Column 2 */}
                   <div 
-                    className="flex flex-col gap-4"
+                    className="flex flex-col gap-3 md:gap-4"
                     onMouseEnter={() => setHoveredColumn(2)}
                     onMouseLeave={() => setHoveredColumn(null)}
                   >
@@ -57,20 +57,20 @@ export default function Gallery() {
                       alt={galleryItems[2].alt}
                       width={500}
                       height={300}  
-                      className={`w-full object-cover rounded-lg shadow-md transition-all duration-300 ${getImageSizeClass(3, 2, galleryItems[2].initialSize)}`}
+                      className={`w-full object-cover rounded-lg shadow-md transition-all duration-300 h-[120px] md:${getImageSizeClass(3, 2, galleryItems[2].initialSize)}`}
                     />
                     <Image 
                       src={galleryItems[3].imageUrl} 
                       alt={galleryItems[3].alt}
                       width={500}
                       height={150}  
-                      className={`w-full object-cover rounded-lg shadow-md transition-all duration-300 ${getImageSizeClass(4, 2, galleryItems[3].initialSize)}`}
+                      className={`w-full object-cover rounded-lg shadow-md transition-all duration-300 h-[200px] md:${getImageSizeClass(4, 2, galleryItems[3].initialSize)}`}
                     />
                   </div>
                   
-                  {/* Column 3 */}
+                  {/* Column 3 - Hidden on small screens */}
                   <div 
-                    className="flex flex-col gap-4"
+                    className="hidden lg:flex flex-col gap-3 md:gap-4"
                     onMouseEnter={() => setHoveredColumn(3)}
                     onMouseLeave={() => setHoveredColumn(null)}
                   >
@@ -90,9 +90,9 @@ export default function Gallery() {
                     />
                   </div>
                   
-                  {/* Column 4 */}
+                  {/* Column 4 - Hidden on small screens */}
                   <div 
-                    className="flex flex-col gap-4"
+                    className="hidden lg:flex flex-col gap-3 md:gap-4"
                     onMouseEnter={() => setHoveredColumn(4)}
                     onMouseLeave={() => setHoveredColumn(null)}
                   >
