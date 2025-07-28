@@ -66,7 +66,7 @@ interface CalendarCardProps extends calendarEvent {
 }
 
 export const CalendarCard: React.FC<CalendarCardProps> = ({ 
-  id, title, location, date, imageUrl, category, index 
+  id, title, location, date, imageUrl, category 
 }) => {
   
   const handleDownload = () => {
