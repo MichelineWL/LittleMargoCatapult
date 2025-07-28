@@ -3,13 +3,13 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
 
 export function ApolloSeriesSection() {
   const carouselProducts = [
-    { id: 'IDR XXXX', image: '/images/products/apollo-gallery/apollo-gallery-01.jpg' },
-    { id: 'IDR XXXX', image: '/images/products/apollo-gallery/apollo-gallery-02.jpg' },
-    { id: 'IDR XXXX', image: '/images/products/apollo-gallery/apollo-gallery-03.jpg' }, 
-    { id: 'IDR XXXX', image: '/images/products/apollo-gallery/apollo-gallery-04.jpg' },
-    { id: 'IDR XXXX', image: '/images/products/apollo-gallery/apollo-gallery-05.jpg' },
-    { id: 'IDR XXXX', image: '/images/products/apollo-gallery/apollo-gallery-06.jpg' },
-    { id: 'IDR XXXX', image: '/images/products/apollo-gallery/apollo-gallery-07.jpg' },
+    { id: 'Contact Us!', image: '/images/products/apollo-gallery/apollo-gallery-01.jpg' },
+    { id: 'Contact Us!', image: '/images/products/apollo-gallery/apollo-gallery-02.jpg' },
+    { id: 'Contact Us!', image: '/images/products/apollo-gallery/apollo-gallery-03.jpg' }, 
+    { id: 'Contact Us!', image: '/images/products/apollo-gallery/apollo-gallery-04.jpg' },
+    { id: 'Contact Us!', image: '/images/products/apollo-gallery/apollo-gallery-05.jpg' },
+    { id: 'Contact Us!', image: '/images/products/apollo-gallery/apollo-gallery-06.jpg' },
+    { id: 'Contact Us!', image: '/images/products/apollo-gallery/apollo-gallery-07.jpg' },
   ];
 
   return (

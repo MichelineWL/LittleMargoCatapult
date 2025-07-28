@@ -3,13 +3,13 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
 
 export function DieTSeriesSection() {
   const carouselProducts = [
-    { id: 'IDR XXXX', image: '/images/products/die-t-gallery/die-t-gallery-01.jpg' },
-    { id: 'IDR XXXX', image: '/images/products/die-t-gallery/die-t-gallery-02.jpg' },
-    { id: 'IDR XXXX', image: '/images/products/die-t-gallery/die-t-gallery-03.jpg' },
-    { id: 'IDR XXXX', image: '/images/products/die-t-gallery/die-t-gallery-04.jpg' },
-    { id: 'IDR XXXX', image: '/images/products/die-t-gallery/die-t-gallery-05.jpg' },
-    { id: 'IDR XXXX', image: '/images/products/die-t-gallery/die-t-gallery-06.jpg' },
-    { id: 'IDR XXXX', image: '/images/products/die-t-gallery/die-t-gallery-07.jpg' },
+    { id: 'Contact Us!', image: '/images/products/die-t-gallery/die-t-gallery-01.jpg' },
+    { id: 'Contact Us!', image: '/images/products/die-t-gallery/die-t-gallery-02.jpg' },
+    { id: 'Contact Us!', image: '/images/products/die-t-gallery/die-t-gallery-03.jpg' },
+    { id: 'Contact Us!', image: '/images/products/die-t-gallery/die-t-gallery-04.jpg' },
+    { id: 'Contact Us!', image: '/images/products/die-t-gallery/die-t-gallery-05.jpg' },
+    { id: 'Contact Us!', image: '/images/products/die-t-gallery/die-t-gallery-06.jpg' },
+    { id: 'Contact Us!', image: '/images/products/die-t-gallery/die-t-gallery-07.jpg' },
   ];
 
   return (

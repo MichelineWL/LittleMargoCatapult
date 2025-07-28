@@ -3,13 +3,13 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
 
 export function KlassixSeriesSection() {
   const carouselProducts = [
-    { id: 'IDR XXXX', image: '/images/products/klassix-gallery/klassix-gallery-01.jpg' },
-    { id: 'IDR XXXX', image: '/images/products/klassix-gallery/klassix-gallery-02.jpg' },
-    { id: 'IDR XXXX', image: '/images/products/klassix-gallery/klassix-gallery-03.jpg' },
-    { id: 'IDR XXXX', image: '/images/products/klassix-gallery/klassix-gallery-04.jpg' },
-    { id: 'IDR XXXX', image: '/images/products/klassix-gallery/klassix-gallery-05.jpg' },
-    { id: 'IDR XXXX', image: '/images/products/klassix-gallery/klassix-gallery-06.jpg' },
-    { id: 'IDR XXXX', image: '/images/products/klassix-gallery/klassix-gallery-07.jpg' },
+    { id: 'Contact Us!', image: '/images/products/klassix-gallery/klassix-gallery-01.jpg' },
+    { id: 'Contact Us!', image: '/images/products/klassix-gallery/klassix-gallery-02.jpg' },
+    { id: 'Contact Us!', image: '/images/products/klassix-gallery/klassix-gallery-03.jpg' },
+    { id: 'Contact Us!', image: '/images/products/klassix-gallery/klassix-gallery-04.jpg' },
+    { id: 'Contact Us!', image: '/images/products/klassix-gallery/klassix-gallery-05.jpg' },
+    { id: 'Contact Us!', image: '/images/products/klassix-gallery/klassix-gallery-06.jpg' },
+    { id: 'Contact Us!', image: '/images/products/klassix-gallery/klassix-gallery-07.jpg' },
   ];
 
   return (

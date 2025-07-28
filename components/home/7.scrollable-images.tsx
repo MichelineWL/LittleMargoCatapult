@@ -1,7 +1,14 @@
+"use client";
+
 import Image from 'next/image';
 import { Carousel, CarouselContent, CarouselItem } from '../ui/carousel';
+import { useEffect, useRef, useState } from 'react';
 
 export function ScrollableImagesSection() {
+  const [api, setApi] = useState<any>();
+  const intervalRef = useRef<NodeJS.Timeout | null>(null);
+  const isHolding = useRef(false);
+  
   const productImages = [
     '/images/products/apollo-gallery/apollo-gallery-01.jpg',
     '/images/products/apollo-gallery/apollo-gallery-02.jpg',
@@ -35,11 +42,53 @@ export function ScrollableImagesSection() {
     '/images/products/roo-pouch-gallery/roo-pouch-gallery-04.jpg',
   ];
 
+  useEffect(() => {
+    if (!api) return;
+
+    // Static auto-scroll - runs continuously unless user is holding
+    intervalRef.current = setInterval(() => {
+      if (!isHolding.current) {
+        api.scrollNext();
+      }
+    }, 3000);
+
+    return () => {
+      if (intervalRef.current) {
+        clearInterval(intervalRef.current);
+      }
+    };
+  }, [api]);
+
+  const handleMouseDown = () => {
+    isHolding.current = true;
+  };
+
+  const handleMouseUp = () => {
+    isHolding.current = false;
+  };
+
+  const handleTouchStart = () => {
+    isHolding.current = true;
+  };
+
+  const handleTouchEnd = () => {
+    isHolding.current = false;
+  };
+
   return (
     <section className="py-16 bg-white">
       <div className="relative w-full">
-        <Carousel opts={{ loop: true, align: "start", dragFree: true }}>
-          <CarouselContent className="-ml-4">
+        <Carousel 
+          setApi={setApi}
+          opts={{ loop: true, align: "start", dragFree: true }}
+        >
+          <CarouselContent 
+            className="-ml-4"
+            onMouseDown={handleMouseDown}
+            onMouseUp={handleMouseUp}
+            onTouchStart={handleTouchStart}
+            onTouchEnd={handleTouchEnd}
+          >
             {productImages.map((image, i) => (
               <CarouselItem key={i} className="pl-4 basis-1/3 md:basis-1/4 lg:basis-1/5">
                 <div className="w-full h-64 relative rounded-lg overflow-hidden">

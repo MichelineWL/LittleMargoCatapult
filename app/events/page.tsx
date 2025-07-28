@@ -35,10 +35,11 @@ export default function EventsPage() {
 
 
   return (
-    <div className="flex flex-col items-center min-h-screen">
-      <h1 className="font-bold text-2xl md:text-3xl lg:text-4xl my-8 md:my-12 lg:my-15 px-4 text-center leading-tight">
-        We&apos;re more than <span className="text-[#1C74BC]">just</span> <span className="text-[#BC1E2C]">selling products</span>
-      </h1>
+    <>
+      <div className="flex flex-col items-center min-h-screen">
+        <h1 className="font-bold text-2xl md:text-3xl lg:text-4xl my-8 md:my-12 lg:my-15 px-4 text-center leading-tight">
+          We&apos;re more than <span className="text-[#1C74BC]">just</span> <span className="text-[#BC1E2C]">selling products</span>
+        </h1>
 
       {/* News Section */}
       <section className="mt-4 text-center bg-[#D9D9D9] w-full p-4 md:p-6 lg:p-10">
@@ -164,8 +165,9 @@ export default function EventsPage() {
           </TabsContent>
         </Tabs>
       </section>
+      </div>
 
       <CustomizationSection />
-    </div>
+    </>
   );
 }
