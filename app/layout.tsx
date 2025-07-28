@@ -29,7 +29,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={plusJakartaSans.className}>
+      <body className={plusJakartaSans.className} suppressHydrationWarning={true}>
         <div className="min-h-screen flex flex-col">
           <Navbar />
           <main className="flex-1 pt-16">{children}</main>
