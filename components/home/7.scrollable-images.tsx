@@ -43,13 +43,8 @@ export function ScrollableImagesSection() {
     '/images/products/roo-pouch-gallery/roo-pouch-gallery-04.jpg',
   ];
 
-  // Prevent hydration mismatch
   useEffect(() => {
-    setIsMounted(true);
-  }, []);
-
-  useEffect(() => {
-    if (!api || !isMounted) return;
+    if (!api) return;
 
     // Static auto-scroll - runs continuously unless user is holding
     intervalRef.current = setInterval(() => {
@@ -63,7 +58,7 @@ export function ScrollableImagesSection() {
         clearInterval(intervalRef.current);
       }
     };
-  }, [api, isMounted]);
+  }, [api]);
 
   const handleMouseDown = () => {
     isHolding.current = true;
