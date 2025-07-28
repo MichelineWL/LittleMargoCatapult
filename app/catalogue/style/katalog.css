@@ -4,6 +4,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  max-width: 100%;
 }
 
 /* Page container styling */
@@ -76,4 +77,11 @@
   position: absolute;
   transform-style: preserve-3d;
   backface-visibility: hidden;
+}
+
+/* Mobile responsive styles */
+@media (max-width: 768px) {
+  .demo-book {
+    display: none;
+  }
 }

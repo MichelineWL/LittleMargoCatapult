@@ -96,9 +96,10 @@ function Flipbook() {
   };
 
   return (
-    <div className='w-screen flex flex-col gap-5 justify-center items-center overflow-hidden'>
+    <div className='w-full flex flex-col gap-5 justify-center items-center overflow-hidden px-4'>
       
-      <div className="relative">
+      {/* Flipbook - Hidden on mobile */}
+      <div className="relative hidden md:block">
         {/* Flipbook component */}
         <HTMLFlipBook
           ref={book}
@@ -162,14 +163,22 @@ function Flipbook() {
         </div>
       </div>
       
-      <div className="mt-20 mb-10">
+      {/* Download button - Always visible, centered on mobile */}
+      <div className="mt-8 md:mt-20 mb-10">
         <a 
           href={pdfPath} 
           download 
-          className="px-4 py-2 bg-[#1C74BC] text-white rounded hover:bg-[#155A8A] transition-colors duration-300"
+          className="px-6 py-3 bg-[#1C74BC] text-white rounded-lg hover:bg-[#155A8A] transition-colors duration-300 text-center block"
         >
-          Download PDF
+          Download Katalog PDF
         </a>
+      </div>
+      
+      {/* Mobile message - Only visible on mobile */}
+      <div className="block md:hidden text-center text-gray-600 px-4 mb-10">
+        <p className="text-sm">
+          Untuk pengalaman terbaik melihat katalog interaktif, silakan buka di desktop atau unduh PDF di atas.
+        </p>
       </div>
     </div>
   );

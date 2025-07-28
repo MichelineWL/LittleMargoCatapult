@@ -3,12 +3,16 @@ import Link from "next/link"
 import Image from "next/image"
 import { useState } from "react"
 import { NavigationMenu, NavigationMenuItem, NavigationMenuLink, NavigationMenuList } from "@/components/ui/navigation-menu"
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
+import { useState } from "react"
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
 
-  const closeSheet = () => setIsOpen(false)
+  const menuItems = [
+    { href: "/products", label: "Product" },
+    { href: "/events", label: "Event" },
+    { href: "/catalogue", label: "Catalogue" }
+  ]
 
   return (
     <nav className="fixed w-full bg-[#BC1E2C] z-50 shadow-lg">
@@ -19,111 +23,55 @@ export default function Navbar() {
             alt="Little Margo Logo"
             width={40}
             height={40}
-            className="w-7 h-7 sm:w-8 sm:h-8 md:w-10 md:h-10"
-            priority
+            className="w-8 h-8 md:w-10 md:h-10"
           />
-          <span className="font-bold text-base sm:text-lg md:text-xl lg:text-2xl text-white">Little Margo</span>
+          <span className="font-bold text-lg md:text-2xl text-white">Little Margo</span>
         </Link>
         
         {/* Desktop Navigation */}
-        <NavigationMenu className="hidden lg:block">
+        <NavigationMenu className="hidden md:flex">
           <NavigationMenuList className="gap-6 lg:gap-8">
-            <NavigationMenuItem>
-              <Link href="/products" legacyBehavior passHref>
-                <NavigationMenuLink className="font-bold text-white hover:text-white/90 text-lg lg:text-xl transition-colors duration-200">
-                  Product
-                </NavigationMenuLink>
-              </Link>
-            </NavigationMenuItem>
-            <NavigationMenuItem>
-              <Link href="/events" legacyBehavior passHref>
-                <NavigationMenuLink className="font-bold text-white hover:text-white/90 text-lg lg:text-xl transition-colors duration-200">
-                  Event
-                </NavigationMenuLink>
-              </Link>
-            </NavigationMenuItem>
-            <NavigationMenuItem>
-              <Link href="/catalogue" legacyBehavior passHref>
-                <NavigationMenuLink className="font-bold text-white hover:text-white/90 text-lg lg:text-xl transition-colors duration-200">
-                  Catalogue
-                </NavigationMenuLink>
-              </Link>
-            </NavigationMenuItem>
+            {menuItems.map((item) => (
+              <NavigationMenuItem key={item.href}>
+                <Link href={item.href} legacyBehavior passHref>
+                  <NavigationMenuLink className="font-bold text-white hover:text-white/80 text-lg lg:text-xl transition-colors duration-200">
+                    {item.label}
+                  </NavigationMenuLink>
+                </Link>
+              </NavigationMenuItem>
+            ))}
           </NavigationMenuList>
         </NavigationMenu>
 
         {/* Mobile Navigation */}
-        <Sheet open={isOpen} onOpenChange={setIsOpen}>
-          <SheetTrigger 
-            className="lg:hidden p-2 rounded-md hover:bg-white/10 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-white/50"
-            aria-label="Open navigation menu"
+        <div className="md:hidden relative">
+          <button 
+            onClick={() => setIsOpen(!isOpen)}
+            className="p-2"
           >
-            <div className="flex flex-col gap-1">
+            <div className="flex flex-col justify-center items-center w-6 h-6 space-y-1">
               <div className={`w-5 h-0.5 bg-white transition-all duration-300 ${isOpen ? 'rotate-45 translate-y-1.5' : ''}`}></div>
               <div className={`w-5 h-0.5 bg-white transition-all duration-300 ${isOpen ? 'opacity-0' : ''}`}></div>
               <div className={`w-5 h-0.5 bg-white transition-all duration-300 ${isOpen ? '-rotate-45 -translate-y-1.5' : ''}`}></div>
             </div>
-          </SheetTrigger>
-          <SheetContent 
-            side="right" 
-            className="bg-[#BC1E2C] border-none w-[280px] sm:w-[320px]"
-          >
-            <div className="flex flex-col h-full">
-              {/* Mobile Header */}
-              <div className="flex items-center gap-3 pt-6 pb-8 border-b border-white/20">
-                <Image
-                  src="/images/logo.png"
-                  alt="Little Margo Logo"
-                  width={32}
-                  height={32}
-                  className="w-8 h-8"
-                />
-                <span className="font-bold text-lg text-white">Little Margo</span>
-              </div>
-              
-              {/* Navigation Links */}
-              <div className="flex flex-col gap-2 mt-6 flex-1">
+          </button>
+          
+          {/* Dropdown Menu */}
+          <div className={`absolute top-full right-0 mt-2 w-48 bg-[#BC1E2C] border border-white/20 rounded-lg shadow-lg transition-all duration-300 ${isOpen ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-2 pointer-events-none'}`}>
+            <div className="py-2">
+              {menuItems.map((item) => (
                 <Link 
-                  href="/products" 
-                  className="group font-bold text-white hover:text-white/90 text-lg py-4 px-4 rounded-lg border-b border-white/10 hover:bg-white/5 transition-all duration-200 flex items-center justify-between"
-                  onClick={closeSheet}
+                  key={item.href}
+                  href={item.href} 
+                  className="block px-4 py-3 font-bold text-white hover:bg-white/10 transition-colors duration-200"
+                  onClick={() => setIsOpen(false)}
                 >
-                  <span>Product</span>
-                  <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
-                  </svg>
+                  {item.label}
                 </Link>
-                <Link 
-                  href="/events" 
-                  className="group font-bold text-white hover:text-white/90 text-lg py-4 px-4 rounded-lg border-b border-white/10 hover:bg-white/5 transition-all duration-200 flex items-center justify-between"
-                  onClick={closeSheet}
-                >
-                  <span>Event</span>
-                  <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
-                  </svg>
-                </Link>
-                <Link 
-                  href="/catalogue" 
-                  className="group font-bold text-white hover:text-white/90 text-lg py-4 px-4 rounded-lg border-b border-white/10 hover:bg-white/5 transition-all duration-200 flex items-center justify-between"
-                  onClick={closeSheet}
-                >
-                  <span>Catalogue</span>
-                  <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
-                  </svg>
-                </Link>
-              </div>
-              
-              {/* Footer Info */}
-              <div className="mt-auto pb-6 pt-4 border-t border-white/20">
-                <p className="text-white/70 text-sm text-center">
-                  Where precision meets innovation
-                </p>
-              </div>
+              ))}
             </div>
-          </SheetContent>
-        </Sheet>
+          </div>
+        </div>
       </div>
     </nav>
   )
