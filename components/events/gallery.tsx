@@ -5,18 +5,28 @@ import Image from "next/image";
 export default function Gallery() {
     const [hoveredColumn, setHoveredColumn] = useState<number | null>(null);
 
-  const getImageSizeClass = (id: number, pairId: number, initialSize: string) => {
-    if (hoveredColumn === pairId) {
-      if (pairId === 2 || pairId === 4) {
-        if (id % 2 === 0) return "h-[300px]";
-        return "h-[150px]";
-      }
-      
-      if (id % 2 === 1) return "h-[300px]";
-      return "h-[150px]";
-    } 
+  const getImageSizeClass = (imageIndex: number, columnId: number, initialSize: string) => {
+    // Mobile heights - fixed untuk semua kondisi
+    const mobileHeight = imageIndex % 2 === 0 ? "h-[200px]" : "h-[120px]";
     
-    return initialSize === 'small' ? "h-[150px]" : "h-[300px]";
+    // Desktop heights
+    let desktopHeight;
+    
+    if (hoveredColumn === columnId) {
+      // Saat hover - pattern berbeda untuk kolom ganjil vs genap
+      if (columnId === 1 || columnId === 3) {
+        // Kolom 1 & 3: gambar kedua (index ganjil) yang membesar
+        desktopHeight = imageIndex % 2 === 1 ? "md:h-[350px]" : "md:h-[100px]";
+      } else {
+        // Kolom 2 & 4: gambar pertama (index genap) yang membesar
+        desktopHeight = imageIndex % 2 === 0 ? "md:h-[350px]" : "md:h-[100px]";
+      }
+    } else {
+      // Default state - gunakan initialSize
+      desktopHeight = initialSize === 'large' ? "md:h-[300px]" : "md:h-[150px]";
+    }
+    
+    return `${mobileHeight} ${desktopHeight}`;
   };
     return (
         <>
@@ -35,14 +45,14 @@ export default function Gallery() {
                       alt={galleryItems[0].alt}
                       width={500}
                       height={300} 
-                      className={`w-full object-cover rounded-lg shadow-md transition-all duration-300 h-[200px] md:${getImageSizeClass(1, 1, galleryItems[0].initialSize)}`}
+                      className={`w-full object-cover rounded-lg shadow-md transition-all duration-500 ${getImageSizeClass(0, 1, galleryItems[0].initialSize)}`}
                     />
                     <Image 
                       src={galleryItems[1].imageUrl} 
                       alt={galleryItems[1].alt}
                       width={500}
                       height={150}  
-                      className={`w-full object-cover rounded-lg shadow-md transition-all duration-300 h-[120px] md:${getImageSizeClass(2, 1, galleryItems[1].initialSize)}`}
+                      className={`w-full object-cover rounded-lg shadow-md transition-all duration-500 ${getImageSizeClass(1, 1, galleryItems[1].initialSize)}`}
                     />
                   </div>
                   
@@ -57,14 +67,14 @@ export default function Gallery() {
                       alt={galleryItems[2].alt}
                       width={500}
                       height={300}  
-                      className={`w-full object-cover rounded-lg shadow-md transition-all duration-300 h-[120px] md:${getImageSizeClass(3, 2, galleryItems[2].initialSize)}`}
+                      className={`w-full object-cover rounded-lg shadow-md transition-all duration-500 ${getImageSizeClass(2, 2, galleryItems[2].initialSize)}`}
                     />
                     <Image 
                       src={galleryItems[3].imageUrl} 
                       alt={galleryItems[3].alt}
                       width={500}
                       height={150}  
-                      className={`w-full object-cover rounded-lg shadow-md transition-all duration-300 h-[200px] md:${getImageSizeClass(4, 2, galleryItems[3].initialSize)}`}
+                      className={`w-full object-cover rounded-lg shadow-md transition-all duration-500 ${getImageSizeClass(3, 2, galleryItems[3].initialSize)}`}
                     />
                   </div>
                   
@@ -79,14 +89,14 @@ export default function Gallery() {
                       alt={galleryItems[4].alt}
                       width={500}
                       height={300}  
-                      className={`w-full object-cover rounded-lg shadow-md transition-all duration-300 ${getImageSizeClass(5, 3, galleryItems[4].initialSize)}`}
+                      className={`w-full object-cover rounded-lg shadow-md transition-all duration-500 ${getImageSizeClass(4, 3, galleryItems[4].initialSize)}`}
                     />
                     <Image 
                       src={galleryItems[5].imageUrl} 
                       alt={galleryItems[5].alt}
                       width={500}
                       height={150}  
-                      className={`w-full object-cover rounded-lg shadow-md transition-all duration-300 ${getImageSizeClass(6, 3, galleryItems[5].initialSize)}`}
+                      className={`w-full object-cover rounded-lg shadow-md transition-all duration-500 ${getImageSizeClass(5, 3, galleryItems[5].initialSize)}`}
                     />
                   </div>
                   
@@ -101,14 +111,14 @@ export default function Gallery() {
                       alt={galleryItems[6].alt}
                       width={500}
                       height={300}  
-                      className={`w-full object-cover rounded-lg shadow-md transition-all duration-300 ${getImageSizeClass(7, 4, galleryItems[6].initialSize)}`}
+                      className={`w-full object-cover rounded-lg shadow-md transition-all duration-500 ${getImageSizeClass(6, 4, galleryItems[6].initialSize)}`}
                     />
                     <Image 
                       src={galleryItems[7].imageUrl} 
                       alt={galleryItems[7].alt}
                       width={500}
                       height={150}  
-                      className={`w-full object-cover rounded-lg shadow-md transition-all duration-300 ${getImageSizeClass(8, 4, galleryItems[7].initialSize)}`}
+                      className={`w-full object-cover rounded-lg shadow-md transition-all duration-500 ${getImageSizeClass(7, 4, galleryItems[7].initialSize)}`}
                     />
                   </div>
                 </div>

@@ -8,50 +8,50 @@ export interface GalleryItem {
 export const galleryItems: GalleryItem[] = [
   {
     id: 1,
-    imageUrl: "/images/events/event-01.jpg",
-    alt: "Event 1",
-    initialSize: 'small'
+    imageUrl: "/images/events/1.jpg",
+    alt: "Slingshot Competition Event",
+    initialSize: 'large'
   },
   {
     id: 2,
-    imageUrl: "/images/events/event-02.jpg",
-    alt: "Event 2",
-    initialSize: 'large'
+    imageUrl: "/images/events/2.jpg",
+    alt: "Community Workshop",
+    initialSize: 'small'
   },
   {
     id: 3,
-    imageUrl: "/images/events/event-03.jpg",
-    alt: "Event 3",
-    initialSize: 'large'
+    imageUrl: "/images/events/3.jpg",
+    alt: "Catapult Training Session",
+    initialSize: 'small'
   },
   {
     id: 4,
-    imageUrl: "/images/events/event-04.jpg",
-    alt: "Event 4",
-    initialSize: 'small'
-  },
-  {
-    id: 5,
-    imageUrl: "/images/events/event-05.jpg", 
-    alt: "Event 5",
-    initialSize: 'small'
-  },
-  {
-    id: 6,
-    imageUrl: "/images/events/event-06.jpg",
-    alt: "Event 6", 
+    imageUrl: "/images/events/4.jpg",
+    alt: "Annual Gathering",
     initialSize: 'large'
   },
   {
+    id: 5,
+    imageUrl: "/images/events/5.JPG", 
+    alt: "Slingshot Tournament",
+    initialSize: 'large'
+  },
+  {
+    id: 6,
+    imageUrl: "/images/events/6.JPG",
+    alt: "Skills Development Workshop", 
+    initialSize: 'small'
+  },
+  {
     id: 7, 
-    imageUrl: "/images/events/event-07.jpg",
-    alt: "Event 7",
-    initialSize: 'large' 
+    imageUrl: "/images/events/7.JPG",
+    alt: "Community Event",
+    initialSize: 'small' 
   },
   {
     id: 8,
-    imageUrl: "/images/events/event-08.jpg",
-    alt: "Event 8",
-    initialSize: 'small' 
+    imageUrl: "/images/events/8.JPG",
+    alt: "Little Margo Event",
+    initialSize: 'large' 
     }
 ];
