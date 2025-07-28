@@ -6,6 +6,7 @@ import { useEffect, useRef, useState } from 'react';
 
 export function ScrollableImagesSection() {
   const [api, setApi] = useState<any>();
+  const [isMounted, setIsMounted] = useState(false);
   const intervalRef = useRef<NodeJS.Timeout | null>(null);
   const isHolding = useRef(false);
   
@@ -42,8 +43,13 @@ export function ScrollableImagesSection() {
     '/images/products/roo-pouch-gallery/roo-pouch-gallery-04.jpg',
   ];
 
+  // Prevent hydration mismatch
   useEffect(() => {
-    if (!api) return;
+    setIsMounted(true);
+  }, []);
+
+  useEffect(() => {
+    if (!api || !isMounted) return;
 
     // Static auto-scroll - runs continuously unless user is holding
     intervalRef.current = setInterval(() => {
@@ -57,7 +63,7 @@ export function ScrollableImagesSection() {
         clearInterval(intervalRef.current);
       }
     };
-  }, [api]);
+  }, [api, isMounted]);
 
   const handleMouseDown = () => {
     isHolding.current = true;
