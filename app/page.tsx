@@ -15,9 +15,9 @@ export default function Home() {
       <HeroSection />
       <StatsSection />
       <ProductsSection />
-      <section className="py-16 bg-gray-50">
+      <section className="py-12 md:py-16 bg-gray-50">
         <div className="container mx-auto px-4">
-          <div className="space-y-16">
+          <div className="space-y-12 md:space-y-16">
             <MaterialsSection />
             <LocalPresenceSection />
             <WorldwideSection />

@@ -8,29 +8,30 @@ import {
 
 export default function Footer() {
   return (
-    <footer className="bg-[#BC1E2C] pt-16 pb-8 text-white">
+    <footer className="bg-[#BC1E2C] pt-12 md:pt-16 pb-6 md:pb-8 text-white">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
-          <div>
-            <div className="mb-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 mb-6 md:mb-8">
+          <div className="text-center md:text-left">
+            <div className="mb-4 flex justify-center md:justify-start">
               <Image
                 src="/images/logo.png"
                 alt="Little Margo Logo"
-                width={150}
-                height={50}
+                width={120}
+                height={40}
+                className="w-24 md:w-32 h-auto"
               />
             </div>
-            <p className="mb-4">
+            <p className="mb-4 text-sm md:text-base">
               Where precisions meets innovations in sustainable slingshots.
             </p>
-            <p className="text-sm opacity-80">
+            <p className="text-xs md:text-sm opacity-80">
               Depok, Jawa Barat Indonesia
             </p>
           </div>
           
-          <div>
-            <h4 className="font-semibold mb-4">Products</h4>
-            <ul className="space-y-2 opacity-80">
+          <div className="text-center md:text-left">
+            <h4 className="font-semibold mb-4 text-base md:text-lg">Products</h4>
+            <ul className="space-y-2 opacity-80 text-sm md:text-base">
               <li><Link href="/products/klasik" className="hover:opacity-100">Klasik</Link></li>
               <li><Link href="/products/a-six" className="hover:opacity-100">A-Six</Link></li>
               <li><Link href="/products/die-t" className="hover:opacity-100">Die-T</Link></li>
@@ -40,70 +41,70 @@ export default function Footer() {
             </ul>
           </div>
 
-          <div>
-            <h4 className="font-semibold mb-4">Social Media</h4>
+          <div className="text-center md:text-left">
+            <h4 className="font-semibold mb-4 text-base md:text-lg">Social Media</h4>
             <ul className="space-y-3">
               <li>
-                <Link href="https://instagram.com/littlemargo.catapult" className="flex items-center gap-2">
+                <Link href="https://instagram.com/littlemargo.catapult" className="flex items-center gap-2 justify-center md:justify-start">
                   <div className="bg-white p-1.5 rounded-full">
-                    <Image src="/images/icons/sosmed/instagram.svg" alt="Instagram" width={20} height={20} />
+                    <Image src="/images/icons/sosmed/instagram.svg" alt="Instagram" width={16} height={16} className="md:w-5 md:h-5" />
                   </div>
-                  <span className="opacity-80 hover:opacity-100">Instagram</span>
+                  <span className="opacity-80 hover:opacity-100 text-sm md:text-base">Instagram</span>
                 </Link>
               </li>
               <li>
-                <Link href="https://facebook.com/LittleMargoCatapults/" className="flex items-center gap-2">
+                <Link href="https://facebook.com/LittleMargoCatapults/" className="flex items-center gap-2 justify-center md:justify-start">
                   <div className="bg-white p-1.5 rounded-full">
-                    <Image src="/images/icons/sosmed/facebook.svg" alt="Facebook" width={20} height={20} />
+                    <Image src="/images/icons/sosmed/facebook.svg" alt="Facebook" width={16} height={16} className="md:w-5 md:h-5" />
                   </div>
-                  <span className="opacity-80 hover:opacity-100">Facebook</span>
+                  <span className="opacity-80 hover:opacity-100 text-sm md:text-base">Facebook</span>
                 </Link>
               </li>
               <li>
-                <Link href="https://tokopedia.com/littlemargocatapults" className="flex items-center gap-2">
+                <Link href="https://tokopedia.com/littlemargocatapults" className="flex items-center gap-2 justify-center md:justify-start">
                   <div className="bg-white p-1.5 rounded-full">
-                    <Image src="/images/icons/sosmed/tokopedia.svg" alt="Tokopedia" width={20} height={20} />
+                    <Image src="/images/icons/sosmed/tokopedia.svg" alt="Tokopedia" width={16} height={16} className="md:w-5 md:h-5" />
                   </div>
-                  <span className="opacity-80 hover:opacity-100">Tokopedia</span>
+                  <span className="opacity-80 hover:opacity-100 text-sm md:text-base">Tokopedia</span>
                 </Link>
               </li>
             </ul>
           </div>
 
-          <div>
-            <h4 className="font-semibold mb-4">Contact</h4>
+          <div className="text-center md:text-left">
+            <h4 className="font-semibold mb-4 text-base md:text-lg">Contact</h4>
             <ul className="space-y-3">
-              <li className="flex items-center gap-2">
+              <li className="flex items-center gap-2 justify-center md:justify-start">
                 <Link href="mailto:loremipsum@gmail.com" className="flex items-center gap-2">
                   <div className="bg-white p-1.5 rounded-full">
-                    <EnvelopeIcon className="w-5 h-5 text-[#BC1E2C]" />
+                    <EnvelopeIcon className="w-4 h-4 md:w-5 md:h-5 text-[#BC1E2C]" />
                   </div>
-                  <span className="opacity-80">loremipsum@gmail.com</span>
+                  <span className="opacity-80 text-sm md:text-base">loremipsum@gmail.com</span>
                 </Link>
               </li>
-              <li className="flex items-center gap-2">
+              <li className="flex items-center gap-2 justify-center md:justify-start">
                 <Link href="tel:+6281234567890" className="flex items-center gap-2">
                   <div className="bg-white p-1.5 rounded-full">
-                    <PhoneIcon className="w-5 h-5 text-[#BC1E2C]" />
+                    <PhoneIcon className="w-4 h-4 md:w-5 md:h-5 text-[#BC1E2C]" />
                   </div>
-                  <span className="opacity-80">+62 812-3456-7890</span>
+                  <span className="opacity-80 text-sm md:text-base">+62 812-3456-7890</span>
                 </Link>
               </li>
-              <li className="flex items-center gap-2">
+              <li className="flex items-center gap-2 justify-center md:justify-start">
                 <Link href="https://wa.me/6281234567890" className="flex items-center gap-2">
                   <div className="bg-white p-1.5 rounded-full">
-                    <Image src="/images/icons/sosmed/whatsapp.svg" alt="WhatsApp" width={20} height={20} />
+                    <Image src="/images/icons/sosmed/whatsapp.svg" alt="WhatsApp" width={16} height={16} className="md:w-5 md:h-5" />
                   </div>
-                  <span className="opacity-80">+62 812-3456-7890</span>
+                  <span className="opacity-80 text-sm md:text-base">+62 812-3456-7890</span>
                 </Link>
               </li>
             </ul>
           </div>
         </div>
 
-        <Separator className="my-8" />
+        <Separator className="my-6 md:my-8" />
 
-        <div className="text-center text-sm text-600">
+        <div className="text-center text-xs md:text-sm text-gray-300">
           <p>&copy; {new Date().getFullYear()} Little Margo. All rights reserved.</p>
         </div>
       </div>
