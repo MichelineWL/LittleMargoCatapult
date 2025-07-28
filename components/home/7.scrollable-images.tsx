@@ -3,9 +3,10 @@
 import Image from 'next/image';
 import { Carousel, CarouselContent, CarouselItem } from '../ui/carousel';
 import { useEffect, useRef, useState } from 'react';
+import type { CarouselApi } from '@/components/ui/carousel';
 
 export function ScrollableImagesSection() {
-  const [api, setApi] = useState<any>();
+  const [api, setApi] = useState<CarouselApi>();
   const intervalRef = useRef<NodeJS.Timeout | null>(null);
   const isHolding = useRef(false);
   
