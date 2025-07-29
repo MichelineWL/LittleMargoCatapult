@@ -14,9 +14,10 @@ export function LocalPresenceSection() {
         <Image
           src="/images/icons/map.png"
           alt="Indonesia Map Distribution"
-          fill
+          width={768}
+          height={300}
           sizes="(max-width: 768px) 100vw, (max-width: 1024px) 80vw, 768px"
-          className="object-contain"
+          className="object-contain w-full h-full"
           priority
         />
       </div>

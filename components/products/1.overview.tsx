@@ -29,7 +29,7 @@ export function OverviewSection() {
             <div className="w-full">
               <ProductCard
                 bgColor="rgba(255,255,255,1)"
-                image="/images/products/apollo-gallery/apollo-gallery-01.jpg"
+                image="/images/products/roo-pouch-gallery/roo-pouch-gallery-09.jpg"
                 titleBgColor="#000"
                 title="Pouches"
                 titleColor="#fff"
@@ -43,7 +43,7 @@ export function OverviewSection() {
             <div className="w-full">
               <ProductCard
                 bgColor="rgba(255,255,255,1)"
-                image="/images/products/apollo-gallery/apollo-gallery-02.jpg"
+                image= "/images/products/misc-gallery/misc-gallery-11.jpg"
                 titleBgColor="#000"
                 title="Frames"
                 titleColor="#fff"

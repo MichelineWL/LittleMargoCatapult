@@ -13,10 +13,10 @@ export function MaterialsSection() {
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 max-w-4xl mx-auto">
         {[
-          { image: "a-six-gallery-02.jpg", material: "Recycled skateboard deck" },
-          { image: "a-six-gallery-02.jpg", material: "Repurposed water gallon cap" },
-          { image: "a-six-gallery-02.jpg", material: "Sustainably sourced wood" },
-          { image: "a-six-gallery-02.jpg", material: "Upcycled fabric" },
+          { image: "misc-gallery/misc-gallery-01.jpg", material: "Recycled skateboard deck" },
+          { image: "misc-gallery/misc-gallery-05.jpg", material: "Repurposed water gallon cap" },
+          { image: "misc-gallery/misc-gallery-46.jpg", material: "Sustainably sourced wood" },
+          { image: "die-t-gallery/die-t-gallery-18.jpg", material: "Upcycled fabric" },
         ].map(({ image, material }) => (
           <div
             key={material}
@@ -24,7 +24,7 @@ export function MaterialsSection() {
           >
             <div className="w-16 h-16 md:w-20 md:h-20 relative flex-shrink-0 bg-white/20 rounded-full overflow-hidden border-3 md:border-4 border-[#BC1E2C] z-10">
               <Image
-                src={`/images/products/a-six-gallery/${image}`}
+                src={`/images/products/${image}`}
                 alt={material}
                 fill
                 sizes="(max-width: 768px) 64px, 80px"

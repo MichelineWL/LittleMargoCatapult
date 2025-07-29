@@ -13,7 +13,7 @@ const PRODUCTS: Product[] = [
   },
   {
     name: "A-Six",
-    image: "/images/products/a-six-gallery/a-six-gallery-01.jpg",
+    image: "/images/products/a-six-gallery/a-six-gallery-18.jpg",
     description: "A fusion of Klassix and Die-T for a blend of traditional and modern slingshot design.",
   },
   {
@@ -28,12 +28,12 @@ const PRODUCTS: Product[] = [
   },
   {
     name: "Margo Latte",
-    image: "/images/products/margo-latte-gallery/margo-latte-gallery-01.jpg",
+    image: "/images/products/margo-latte-gallery/margo-latte-gallery-07.jpg",
     description: "Ergonomic 'footprint' grip design, inspired by primitive tools for a natural hold.",
   },
   {
     name: "Fedora",
-    image: "/images/products/fedora-gallery/fedora-gallery-01.jpg",
+    image: "/images/products/fedora-gallery/fedora-gallery-04.jpg",
     description: "Tailored for a modern slingshot grip—sleek, refined, and elegant.",
   },
 ];

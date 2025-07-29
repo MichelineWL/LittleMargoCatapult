@@ -1,10 +1,10 @@
 import Image from "next/image";
 
 const HERO_IMAGES = {
-  showcase: "/images/hero/showcase-product.png",
-  action: "/images/hero/action-shot.png",
-  detail: "/images/hero/product-detail.png",
-  lifestyle: "/images/hero/lifestyle-use.png",
+  showcase: "/images/products/misc-gallery/misc-gallery-10.jpg",
+  action: "/images/products/misc-gallery/misc-gallery-11.jpg",
+  detail: "/images/products/misc-gallery/misc-gallery-17.jpg",
+  lifestyle: "/images/products/misc-gallery/misc-gallery-08.jpg",
 } as const;
 
 export function HeroSection() {
@@ -28,7 +28,7 @@ export function HeroSection() {
           <div className="relative order-1 lg:order-2">
             <div className="grid grid-cols-2 gap-2 md:gap-4">
               <div className="space-y-2 md:space-y-4">
-                <div className="relative h-32 md:h-48 overflow-hidden rounded-lg">
+                <div className="relative h-32 md:h-48 overflow-hidden rounded-3xl">
                   <Image
                     src={HERO_IMAGES.showcase}
                     alt="Catapult showcase"
@@ -36,17 +36,7 @@ export function HeroSection() {
                     className="object-cover"
                   />
                 </div>
-                <div className="relative h-40 md:h-64 overflow-hidden rounded-lg">
-                  <Image
-                    src={HERO_IMAGES.action}
-                    alt="Catapult in action"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-              </div>
-              <div className="space-y-2 md:space-y-4 pt-4 md:pt-8">
-                <div className="relative h-40 md:h-64 overflow-hidden rounded-lg">
+                <div className="relative h-40 md:h-64 overflow-hidden rounded-3xl">
                   <Image
                     src={HERO_IMAGES.detail}
                     alt="Product detail"
@@ -54,7 +44,17 @@ export function HeroSection() {
                     className="object-cover"
                   />
                 </div>
-                <div className="relative h-32 md:h-48 overflow-hidden rounded-lg">
+              </div>
+              <div className="space-y-2 md:space-y-4 pt-4 md:pt-8">
+                <div className="relative h-40 md:h-64 overflow-hidden rounded-3xl">
+                  <Image
+                    src={HERO_IMAGES.action}
+                    alt="Catapult in action"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="relative h-32 md:h-48 overflow-hidden rounded-3xl">
                   <Image
                     src={HERO_IMAGES.lifestyle}
                     alt="Product showcase"
